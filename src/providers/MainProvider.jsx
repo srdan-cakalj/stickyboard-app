@@ -1,5 +1,6 @@
 
 
+import { demoBoards } from '../data/demoBoards.js'
 import { useState, useRef, useEffect } from 'react'
 import { MainContext } from '../contexts/MainContext.jsx'
 import { boardTemplate } from '../templates/Templates.jsx'
@@ -11,7 +12,7 @@ export default function MainProvider({ children }) {
 
   const [boards, setBoards] = useState(() => {
     const savedBoards = localStorage.getItem('boards')
-    return savedBoards ? JSON.parse(savedBoards) : [{ ...boardTemplate, boardId: crypto.randomUUID() }]
+    return savedBoards ? JSON.parse(savedBoards) : demoBoards
   })
   useEffect(() => {
     localStorage.setItem('boards', JSON.stringify(boards))
@@ -20,7 +21,7 @@ export default function MainProvider({ children }) {
 
   const [currentBoardId, setCurrentBoardId] = useState(() => {
     const savedCurrentBoardId = localStorage.getItem('currentBoardId')
-    return savedCurrentBoardId ? JSON.parse(savedCurrentBoardId) : null
+    return savedCurrentBoardId ? JSON.parse(savedCurrentBoardId) : demoBoards[0].boardId
   })
   useEffect(() => {
     if (boards.length > 0 && currentBoardId == null) {
