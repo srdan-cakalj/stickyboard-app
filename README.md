@@ -91,7 +91,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/SrdanBTM/stickyboard-app.git
+git clone https://github.com/srdan-cakalj/stickyboard-app.git
 ```
 
 Install dependencies:
