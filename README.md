@@ -4,7 +4,7 @@ A desktop-focused React sticky notes app for organizing tasks across multiple bo
 
 ## Live Demo
 
-https://srdanbtm.github.io/stickyboard-app/
+https://srdan-cakalj.github.io/stickyboard-app/
 
 ## Screenshots
 
